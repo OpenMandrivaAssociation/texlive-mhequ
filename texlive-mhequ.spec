@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/mhequ
+# catalog-date 2008-05-01 20:41:51 +0200
+# catalog-license other-free
+# catalog-version 1.61
 Name:		texlive-mhequ
 Version:	1.61
 Release:	1
@@ -42,6 +48,7 @@ package itself describe usage.
 %{_texmfdistdir}/tex/latex/mhequ/mhequ.sty
 %doc %{_texmfdistdir}/doc/latex/mhequ/example.pdf
 %doc %{_texmfdistdir}/doc/latex/mhequ/example.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ package itself describe usage.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
