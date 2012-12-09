@@ -49,3 +49,17 @@ package itself describe usage.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.61-2
++ Revision: 753980
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.61-1
++ Revision: 719017
+- texlive-mhequ
+- texlive-mhequ
+- texlive-mhequ
+- texlive-mhequ
+
