@@ -6,7 +6,7 @@
 # catalog-version 1.61
 Name:		texlive-mhequ
 Version:	1.61
-Release:	9
+Release:	10
 Summary:	Multicolumn equations, tags, labels, sub-numbering
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mhequ
