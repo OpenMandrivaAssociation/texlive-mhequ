@@ -1,12 +1,6 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/mhequ
-# catalog-date 2008-05-01 20:41:51 +0200
-# catalog-license other-free
-# catalog-version 1.61
 Name:		texlive-mhequ
-Version:	1.61
-Release:	10
+Version:	1.7
+Release:	1
 Summary:	Multicolumn equations, tags, labels, sub-numbering
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mhequ
@@ -36,9 +30,8 @@ package itself describe usage.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/mhequ/mhequ.sty
-%doc %{_texmfdistdir}/doc/latex/mhequ/example.pdf
-%doc %{_texmfdistdir}/doc/latex/mhequ/example.tex
+%{_texmfdistdir}/tex/latex/mhequ
+%doc %{_texmfdistdir}/doc/latex/mhequ
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,17 +42,3 @@ package itself describe usage.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.61-2
-+ Revision: 753980
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.61-1
-+ Revision: 719017
-- texlive-mhequ
-- texlive-mhequ
-- texlive-mhequ
-- texlive-mhequ
-
