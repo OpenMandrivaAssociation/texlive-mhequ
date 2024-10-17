@@ -3,7 +3,7 @@ Version:	64978
 Release:	2
 Summary:	Multicolumn equations, tags, labels, sub-numbering
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mhequ
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mhequ
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mhequ.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mhequ.doc.r%{version}.tar.xz
