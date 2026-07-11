@@ -1,44 +1,27 @@
-Name:		texlive-mhequ
-Version:	64978
-Release:	2
+%global tl_name mhequ
+%global tl_revision 64978
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.72
+Release:	%{tl_revision}.1
 Summary:	Multicolumn equations, tags, labels, sub-numbering
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mhequ
-License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mhequ.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mhequ.doc.r%{version}.tar.xz
+License:	pd
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mhequ.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mhequ.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-MHequ simplifies creating multi-column equation environments,
-and tagging the equations therein. It supports sub-numbers of
-blocks of equations (like (1.2a), (1.2b), etc) and references
-to each equation individually (1.2a) or to the whole block
-(1.2). The labels can be shown in draft mode. Comments in the
-package itself describe usage.
+The mhequ style file simplifies creating multi-column equation
+environments and tagging equations therein. It supports sub-numbering of
+blocks of equations (like (1.2a), (1.2b), etc) and references to each
+equation individually (1.2a) or to the whole block (1.2). The labels can
+be shown in draft mode. The default behaviour is to show an equation
+number if and only if the equation actually has a label, which reduces
+visual clutter. Comments in the package itself describe its usage, which
+should also be self-evident from the provided example file.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/mhequ
-%doc %{_texmfdistdir}/doc/latex/mhequ
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
